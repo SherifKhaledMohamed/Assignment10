@@ -196,8 +196,8 @@ function reportSectionsData() {
 function getActiveSectionData(scrollPosition) {
   for (var i = 0; i < sectionsData.length; i++) {
     if (
-      sectionsData[i].sectionStart < scrollPosition + scrollMargin &&
-      scrollPosition + scrollMargin < sectionsData[i].sectionEnd
+      sectionsData[i].sectionStart <= scrollPosition &&
+      scrollPosition  <= sectionsData[i].sectionEnd
     ) {
       return sectionsData[i].sectionId;
     }
